@@ -1,0 +1,40 @@
+li{
+	list-style: none;
+}
+.remove{
+	color:red;
+}
+img{
+	max-width: 100%;
+	margin: 0 auto;
+}
+.image-container{
+	height: 300px;
+	width: 300px;
+	display: grid;
+	margin: 0 auto;
+}
+
+.loader{
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  margin: -75px 0 0 -75px;
+  border: 10px solid white;
+  border-radius: 50%;
+  border-top: 10px solid black;
+  
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}

@@ -1,0 +1,47 @@
+<div>
+	<a href="#" [routerLink] ="['/quiz/'+pid]" class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back to quiz </a>
+</div>
+
+<div  class="container">
+	<div class="panel panel-default">
+		<div class="panel-heading">Edit Question and Answers</div>
+		<div class="panel-body" >
+			<form (submit) = "onUpdate()" >
+				<div class="form-group" >
+					<label for="text" >Question:</label>
+					<input type="text" [(ngModel)] = "question" name="question" class="form-control" placeholder="Question" >
+				</div>
+				<div class="form-group row" *ngFor = "let answer of answers; let i = index ">
+					<div class="col-sm-6">
+						<label for="text" >Answer:</label>
+						<input type="text" [value] = "answer.name" (input) = "answer.name = $event.target.value" class="form-control" name="name"  placeholder="Answer" *ngIf ="!answer.image">
+						
+						<div class="container image-container" *ngIf = "answer.image ">
+							<a class="glyphicon glyphicon-remove remove" (click) = "onDeleteImage(i)"></a>
+							<img src="{{answer.image}}" >
+						</div>
+						<div [dropzone]="config" (error)="onUploadError($event)" (addedfile)="onImageAdded($event,i)" *ngIf = "!answer.image">
+							
+							<div class="dz-message" data-dz-message>
+								<div class="dropzone-div" ><span class="dropzone-text">Add image as an answer</span></div>
+							</div>
+						</div>
+					</div>
+					<div class = "col-sm-2 check">
+						<input type="checkbox"  [checked] = "answer.isCorrectAnswer" (change) = "answer.isCorrectAnswer = !answer.isCorrectAnswer" name="isCorrectAnswer" >
+						<span>Mark As Correct</span>
+					</div>
+					<div class="col-sm-4 add">
+						<a  class="btn btn-danger"  (click)="removeAnswer(answer,i)" >Delete</a>
+						<a *ngIf="showAdd(answer)" class="btn btn-primary" (click) = "addNewAnswer()">Add More Options</a>
+					</div>
+				</div>
+				<br>
+				<div>
+					<button  class="btn btn-primary pull-right" type="submit">Submit </button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+

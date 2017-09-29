@@ -1,0 +1,41 @@
+<div>
+	<div class="row">
+		<div>
+			<a href="#" routerLink ="/" class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back to Home Page</a>
+		</div>
+		<div>
+			<h2>Congratulations</h2>
+			<h3>Result:{{a | number: '1.2-2'}}%</h3>
+		</div>
+		<div class="container">
+			
+			<!-- while providing URL as localhost -->
+
+		<div class="fb-share-button" data-href="http://localhost:8050/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:8050/">Share</a></div>
+		
+		<!-- when not proving URL as local host -->
+
+
+		<!-- <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div> -->
+		<!-- <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fquiz-app-india.herokuapp.com%2Fresult%2F&layout=button&size=small&mobile_iframe=true&appId=273601576467343&width=59&height=20" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
+		
+	</div>
+</div>
+<div class="container">
+	<div class="panel panel-default" *ngFor = "let q of userAnswers ; let i = index ">
+		<div class="panel-heading">Question {{i + 1}}: {{q?.question}}</div>
+		<div class="panel-body">
+			<ul>
+				<li *ngFor = "let answer of  q.answers; let i = index ">
+					{{answer.name}}
+					<span *ngIf = "(answer.userAnswer  && answer.isCorrectAnswer === answer.userAnswer) || answer.isCorrectAnswer" class="glyphicon glyphicon-ok right"></span>
+					<span *ngIf = "(answer.userAnswer && answer.isCorrectAnswer !== answer.userAnswer)"  class="glyphicon glyphicon-remove wrong"></span>
+					<img src="{{answer.image}}" *ngIf = "!answer.name ">
+				</li>
+			</ul>
+			<div class="alert {{ isCorrect(q) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(q)}}.</div>
+		</div>
+	</div>
+	<button routerLink = "/" class="btn btn-success btn-block" >Thank You</button>
+</div>
+

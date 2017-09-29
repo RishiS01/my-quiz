@@ -1,0 +1,56 @@
+
+.check{
+	margin-top: 30px;
+	
+}
+.add{
+	margin-top: 30px;
+}
+.cut{
+	margin-left: 60px;
+}
+img{
+	max-width: 100%;
+  margin: 0 auto;
+	padding: 10px;
+}
+.image-container{
+  height: 300px;
+  width: 300px;
+  display: grid;
+  margin: 0 auto;
+}
+
+.dropzone-div{
+	background-color: #f2f2f2;
+	height: 80px;
+  width: 180px;
+  position: relative;
+  border: 1px dotted black;
+  margin-top: 30px;
+}
+.dropzone-text{
+	
+	margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+
+}
+.image-container{
+  height: 250px;
+  width: 250px;
+  display: grid;
+  margin:0px 100px 0px 100px;
+  position: relative;
+}
+.remove{
+  color: red;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  padding-top: 25px;
+   
+}

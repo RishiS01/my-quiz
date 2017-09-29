@@ -1,0 +1,71 @@
+<div>
+	<a href="#" routerLink = '/dashboard' class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back to dashboard</a>
+</div>
+<div class="container">
+	<div>
+		<a href="#" [routerLink] ="['/quiz-questions/'+pid ]" class="btn btn-success pull-right"> <span class="glyphicon glyphicon-plus"></span> Add Questions</a>
+	</div>
+</div>
+<br>
+<br>
+<div>
+	<div class="container">
+		<div class="row">
+			<div class="panel panel-primary">
+				<div class="panel-heading"><h5><b>Quiz Name:</b> {{quiz.quizName}}</h5></div>
+				<div class="panel-body">
+					<form #f = 'ngForm' (ngSubmit) = "onEditQuiz(f)">
+						<div class="form-group col-md-4">
+							<label for = "text">Edit Name Of Quiz:</label>
+							<input type="text" class="form-control"  [(ngModel)]='quiz.quizName' name="quizName" >
+							<div action="/file-upload" class="dropzone" id="my-awesome-dropzone"></div>
+							<div [dropzone]="config"  (addedfile)="onImageAdded($event)" name = "image"  *ngIf = "!quiz.image">
+									
+								<div class="dz-message" data-dz-message >
+									
+									<div class="dropzone-div" ><span class="dropzone-text">Add title image</span></div>
+								</div>
+							</div>
+							<div class=" col-md-4 image-container " *ngIf = "quiz.image">
+								<a class="glyphicon glyphicon-remove remove" (click) = "onDeleteImage()"></a>
+								<img src="{{quiz.image}}" >
+							</div>
+						</div>
+						<div class="col-md-12">
+							<button type="submit" class="  btn btn-primary pull-right submitAddQuiz" (click) = "onEditQuiz(f)">Update</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<div class="container">
+	<table *ngIf = "quizData.length >0 ; else noQuestions" class ="table table-stripped">
+		<thead  class="thead-inverse">
+			<tr>
+				<th>Q.No</th>
+				<th>Question</th>
+				<th width="15%">Options</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let q of quizData ; let i = index ">
+				<td>{{i + 1}}</td>
+				<td>{{q?.question}}</td>
+				<td>
+					<div>
+						<span [routerLink] = "['/edit-question/'+pid,q.id]" class="btn btn-default btn-sm glyphicon glyphicon-pencil questionEdit">Edit</span>
+						<span class="btn btn-danger btn-sm glyphicon glyphicon-trash pull-right deleteQuestion" (click) = "onDeleteQuestion(q,i)">Delete</span>
+					</div></td>
+				</tr>
+			</tbody>
+			
+		</table>
+		<ng-template #noQuestions>
+		<h4 class="condition">No Questions to show</h4>
+		</ng-template>
+	</div>
+	

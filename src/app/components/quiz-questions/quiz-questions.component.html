@@ -1,0 +1,66 @@
+<div>
+	<div >
+		<a href="#" [routerLink] ="['/quiz/'+key]" class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back to quiz data</a>
+	</div>
+</div>
+<div class="row">
+	<div class="row" >
+		<div class="container" >
+			<h4><strong>Note:</strong></h4><h5>*Please fill all the fields</h5>
+			<div class="panel panel-primary">
+				<div class="panel-heading">Quiz Name: {{quiz.quizName}}</div>
+				<div class="panel-body">
+					<form  #addQuestionForm = "ngForm" (submit) = "onAddQuestionSubmit(qu)">
+						<div class="form-group">
+							<label>Question:</label>
+							<input type="text" class="form-control" [(ngModel)] ="question"
+							name="question" placeholder="Question" required >
+							<div *ngIf = "question?.errors?.required && question?.touched" class="alert alert-danger">
+								Question Required
+							</div>
+						</div>
+						<div class="form-group row" *ngFor = "let answer of answers ; let i = index ">
+							<div class="col-sm-6" >
+								<label for="text" >Answer:</label>
+								<input *ngIf="answer.image === '' "  type="text" [value] = "answer.name" (input) = "answer.name = $event.target.value"
+								name="name"  class="form-control"
+								placeholder="Answer" required="name" >
+								<!-- {{answer.name}} -->
+								
+								<div *ngIf= "answer.image || answer.name">
+									<a class="glyphicon glyphicon-remove remove" (click) = "onDeleteImage(image,i)" *ngIf = answer.image></a>
+									<img src="{{answer.image}}" *ngIf = " !answer.name ">
+								</div>
+								
+								
+								<div *ngIf = "name?.errors.required && name?.touched" class="alert alert-danger">
+									Answer Required
+								</div>
+								<div [dropzone]="config" (error)="onAnswerUploadError($event)" (addedfile)="onAddFile($event)" (success)="onAnswerUploadSuccess($event,i)" name = "image" *ngIf = "!answer.image ">
+									
+									<div class="dz-message" data-dz-message >
+										<div class="dropzone-div" *ngIf= !answer.name><span class="dropzone-text" >Add image as an answer</span></div>
+									</div>
+								</div>
+							</div>
+							
+							<div class = "col-sm-2 check">
+								<input type="checkbox"  [checked] = "answer.isCorrectAnswer" (change) = "answer.isCorrectAnswer = !answer.isCorrectAnswer" name="isCorrectAnswer" >
+								<span>Mark As Correct</span>
+							</div>
+							<div class="col-sm-4 add">
+								<a  class="btn btn-danger"  (click)="removeAnswer(answer,i)" >Delete</a>
+								<a *ngIf="showAdd(answer)" class="btn btn-primary" (click) = "addNewAnswer()">Add More Options</a>
+							</div>
+						</div>
+						<br>
+						<div>
+							<button  class="btn btn-primary pull-right" type="submit" [disabled] = "addQuestionForm.invalid" >Submit </button>
+						</div>
+					</form>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	

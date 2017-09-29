@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-2 pull-right">
+			<div>
+				<a href="#" routerLink ="/add-quiz" class="btn btn-success pull-right"> <span class="glyphicon glyphicon-plus"></span> Add Quiz</a>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div>
+			<ul>
+				<li *ngFor = "let q of quizzes" class="col-md-4">
+					<div class="panel panel-default ">
+						<div class="panel-heading"><b> {{q.quizName}}</b><span class="glyphicon glyphicon-remove pull-right remove" (click) = "onDelete(q)"></span>
+						<!-- <a [routerLink] ="['/quiz/'+q.$key]" href="" class="glyphicon glyphicon-pencil pull-right edit"></a> -->
+					</div>
+					<div class="panel-body">
+						<div class="container image-container">
+							<img src="{{q.image}}" >
+						</div>
+						<button [routerLink] ="['/quiz/'+q.$key]" class="btn btn-primary pull-right ">Edit Quiz</button>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="loader" *ngIf= "loader"></div>

@@ -1,0 +1,22 @@
+
+<div>
+	<h2>Welcome to the Quizz</h2>
+</div>
+<div class="container">
+	<div>
+		<ul>
+			<li *ngFor = "let q of quizzes" class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading"><b> {{q.quizName}}</b></div>
+					<div class="panel-body">
+						<div class="container image-container" *ngIf = "q.image">
+							<img src="{{q.image}}" >
+						</div>
+						<button [routerLink] ="['/start-quiz/'+q.$key]" class="btn btn-primary pull-right" [value] = "quiz.id" ([ngModel]) = "quizName" (click) = "startQuiz(id)" >Start Quiz</button> 
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="loader" *ngIf= "loader"></div>

@@ -1,0 +1,27 @@
+<div>
+	<a href="#" routerLink = '/' class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back to Main Page</a>
+</div>
+<div class="container">
+	<div>
+		<h4><b>Note:</b></h4><h5>*You can select Multiple Answers also</h5>
+	</div>
+	<div class="panel panel-default" *ngFor = "let q of quizData ; let i = index ">
+		<div class="panel-heading"><strong>Question {{i + 1}}:</strong> {{q?.question}}</div>
+		<div class="panel-body">
+			<ul *ngFor = "let answer of  q.answers; let i = index ">
+				<li>
+					<input type="checkbox" [checked] = "answer.userAnswer" (change) = "answer.userAnswer = answer.userAnswer ? undefined : true" name="userAnswer">
+					{{answer.name}}
+					<div *ngIf = "answer.image || answer.name; else noimage ">
+						<img src="{{answer.image}}" *ngIf = " !answer.name ">
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<button class="btn btn-success btn-block" (click) = "result()">Finish</button>
+	<ng-template #noimage>
+		<h5 class="condition">No Image to Display</h5>
+	</ng-template>
+
+</div>

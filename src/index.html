@@ -4,11 +4,35 @@
   <meta charset="utf-8">
   <title>QuizApp</title>
   <base href="/">
-
+  <!-- <meta property="og:url"           content="https://quiz-app-india.herokuapp.com/result" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="Result" />
+  <meta property="og:description"   content="I have been using QuizApp & i scored" />
+  <meta property="og:image"         content=https://quiz-app-india.herokuapp.com/result/ />
+ -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/min/basic.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/min/dropzone.min.js"></script>
+   <script type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
 </head>
 <body>
   <app-root></app-root>
+  <div id="fb-root"></div>
+
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=273601576467343";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 </body>
 </html>

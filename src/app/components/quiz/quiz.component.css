@@ -1,0 +1,66 @@
+.thead-inverse{
+	background-color:grey;
+	color: white;
+}
+.condition{
+	color:red;
+	text-align: center;
+}
+img{
+	max-width: 100%;
+	/*margin: 0 auto;*/
+}
+.image-container{
+	height: 250px;
+	width: 250px;
+	display: grid;
+	margin:25px 100px 0px 100px;
+	position: relative;
+}
+.remove{
+	color: red;
+	position: absolute;
+    right: 0;
+    text-decoration: none;
+    padding-top: 5px;
+   
+}
+.deleteQuestion{
+	/*padding-right: 10px;*/
+	margin-right: 20px;
+
+}
+input{
+	margin-top: 
+}
+.submitAddQuiz{
+	/*margin-right: 20px;*/
+}
+.questionEdit{
+	margin-left: 10px;
+}
+.dropzone-div{
+	background-color: #f2f2f2;
+	height: 100px;
+    width: 250px;
+    position: relative;
+    border: 1px dotted black;
+    margin-top: 30px;
+}
+.dropzone-text{
+	
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+}
+
+
+/*.dz-preview {
+	display: none;
+}
+*/
+	

@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="panel panel-primary" >
+		<div class="panel-heading">New Quiz</div>
+		<div class="panel-body">
+			<form #f = "ngForm" (ngSubmit) = "addQuiz(f)">
+				<div class="form-group">
+					<label for = "text">Enter Name Of Quiz</label>
+					<input type="text" class="form-control"  [(ngModel)]='quiz.quizName' name="quizName" required="quizName" #quizName = "ngModel" placeholder="Quiz Name">
+				</div>
+				<div *ngIf = "quizName?.errors?.required && quizName?.touched" class="alert alert-danger">
+					Name Required
+				</div>
+
+				<div action="/file-upload" class="dropzone" id="my-awesome-dropzone"></div>
+				<div class="container image-container " *ngIf = "quiz.image">
+					<a class="glyphicon glyphicon-remove remove" (click) = "onDeleteImage()"></a>
+					<img src="{{quiz.image}}" >
+				</div>
+				<div [dropzone]="config" (error)="onUploadError($event)" (success)="onUploadSuccess($event)" *ngIf = "!quiz.image">
+					<div class="dz-message" data-dz-message>
+						<div class="dropzone-div"><span class="dropzone-text">Add title image</span></div>
+					</div>
+				</div>
+			</form>
+			<button type="submit" class="btn btn-success pull-right" (click) = "addQuiz(f)">Save</button>
+		</div>
+	</div>
+</div>

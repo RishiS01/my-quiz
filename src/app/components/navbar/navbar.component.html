@@ -1,0 +1,20 @@
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Test Your Skills</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <!-- <li *ngIf = 'isLoggedIn'><a href="#" routerLink ="/">Dashboard</a></li> -->
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngIf = '!isLoggedIn'><a href="#" routerLink ="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+      </li>
+      
+      <li *ngIf = 'isLoggedIn'><a href="#" routerLink = '/dashboard' >{{isloggedInUser}}</a></li>
+      <li *ngIf = 'isLoggedIn'><a href="#" (click) = "onLogout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
