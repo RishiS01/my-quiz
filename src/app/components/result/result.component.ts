@@ -49,6 +49,7 @@ export class ResultComponent implements OnInit {
     };
  
     facebookService.init(initParams);
+
     
     }
 
@@ -90,32 +91,19 @@ export class ResultComponent implements OnInit {
     this.a = this.correctAnswers/this.userAnswers.length *100;
   }
 
- 
 
-  // share(url:string){debugger
-  //   let params: UIParams =  {
-  //     href:'http://localhost:8050/',
-  //     method:'share',
-  //     display:'popup'
-  //   };
-  //   this.facebookService.ui(params)
-  //         .then((res:UIResponse) =>{debugger
-  //         console.log('user profile',res)
-  //     })
-  //       .catch(err => console.log(err));
-  // }
-
-
- 
-
-
-  // this.facebookService.ui({
-  //   method: 'share',
-  //   display: 'popup',
-  //   href: 'https://developers.facebook.com/docs/',
-  // }, function(response){});
- 
+// share(FB){
+//   FB.init;
+//  FB.ui({
+//     method: 'share',
+//     display: 'popup',
+//     href: 'https://my-quiz-app-in.herokuapp.com/result/',
+//   }, function(response){});
+// }
 }
+ 
+
+
 
  
 
