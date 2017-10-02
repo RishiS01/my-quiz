@@ -9,7 +9,7 @@ export class ComponentsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {debugger
+  ngOnInit() {
   }
 
 }
