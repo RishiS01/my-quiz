@@ -3,6 +3,7 @@ import { QuizService } from '../../services/quiz.service';
 import { Router,ActivatedRoute,Params } from '@angular/router';
 import { QuizDat } from '../../model/Quiz';
 import { FacebookService, UIResponse, UIParams,InitParams } from 'ngx-facebook';
+import { CeiboShare } from 'ng2-social-share';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { FacebookService, UIResponse, UIParams,InitParams } from 'ngx-facebook';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-	
+  public repoUrl = 'https://my-quiz-app-in.herokuapp.com/';
+
   quizDat:QuizDat;
 	id:string;
 	quizData = [];
@@ -36,6 +38,7 @@ export class ResultComponent implements OnInit {
         image:''
       }]
  a:number;
+
  
   constructor(
   	public router:Router,
@@ -91,7 +94,12 @@ export class ResultComponent implements OnInit {
   score(){ 
     this.a = this.correctAnswers/this.userAnswers.length *100;
   }
-
+}
+ export declare class FacebookParams {
+    u: string;
+    description: string;
+    
+}
 
 
 //   shareBtn(FB) {
@@ -101,7 +109,7 @@ export class ResultComponent implements OnInit {
 //     href: 'https://my-quiz-app-in.herokuapp.com/',
 //   }, function(response){});
 // }
-}
+
  
 
 

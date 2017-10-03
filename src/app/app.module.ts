@@ -43,6 +43,7 @@ import { ComponentsComponent } from './components/components.component';
 // import Facebookmodule
 
 import { FacebookModule } from 'ngx-facebook';
+import { CeiboShare } from 'ng2-social-share';
 
 
 
@@ -112,6 +113,7 @@ export const firebaseConfig = {
     ReactiveFormsModule,
     LoadersCssModule,
     FacebookModule.forRoot()
+
     
   ],
   providers: [
@@ -119,7 +121,8 @@ export const firebaseConfig = {
     AngularFireDatabase,
     AuthService,
     QuizService,
-    AuthGuard
+    AuthGuard,
+    CeiboShare
   ],
   bootstrap: [AppComponent]
 })
