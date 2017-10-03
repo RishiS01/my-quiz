@@ -4,6 +4,7 @@ import { Router,ActivatedRoute,Params } from '@angular/router';
 import { QuizDat } from '../../model/Quiz';
 import { FacebookService, UIResponse, UIParams,InitParams } from 'ngx-facebook';
 
+
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
