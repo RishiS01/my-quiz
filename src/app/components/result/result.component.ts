@@ -93,22 +93,21 @@ export class ResultComponent implements OnInit {
 
 
 shareDialog(FB){
-  FB.init;
- FB.ui({
+ FB.ui(
+  {
     method: 'share',
-    display: 'popup',
-    href: 'https://my-quiz-app-in.herokuapp.com',
-  }, function(response){});
-  let obj = {
-                method: 'feed',
-                link: 'https://my-quiz-app-in.herokuapp.com',
-                picture: 'http://fbrell.com/f8.jpg',
-                name: 'QuizApp',
-                caption: 'Some Caption for the URL',
-                description: 'use this app'
-            };
-             FB.ui(obj);
-            }
+    href: 'https://my-quiz-app-in.herokuapp.com/',
+  },
+  // callback
+  function(response) {
+    if (response && !response.error_message) {
+      alert('Posting completed.');
+    } else {
+      alert('Error while posting.');
+    }
+  }
+)
+}
 }
  
 
