@@ -9,44 +9,53 @@
 		</div>
 		<div class="container">
 			<!-- <div class="fb-share-button" data-href="https://my-quiz-app-in.herokuapp.com/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmy-quiz-app-in.herokuapp.com%2F&amp;src=sdkpreparse">Share</a></div>	 -->
-			 <input id="btnlauncher" type="button" (click)="shareDialog(FB)" value="Share on facebook" class="btn btn-primary"/>
-		</div>
-</div>
-<div class="container">
-	<div class="panel panel-default" *ngFor = "let q of userAnswers ; let i = index ">
-		<div class="panel-heading">Question {{i + 1}}: {{q?.question}}</div>
-		<div class="panel-body">
-			<ul>
-				<li *ngFor = "let answer of  q.answers; let i = index ">
-					{{answer.name}}
-					<span *ngIf = "(answer.userAnswer  && answer.isCorrectAnswer === answer.userAnswer) || answer.isCorrectAnswer" class="glyphicon glyphicon-ok right"></span>
-					<span *ngIf = "(answer.userAnswer && answer.isCorrectAnswer !== answer.userAnswer)"  class="glyphicon glyphicon-remove wrong"></span>
-					<img src="{{answer.image}}" *ngIf = "!answer.name ">
-				</li>
-			</ul>
-			<div class="alert {{ isCorrect(q) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(q)}}.</div>
+			<button id="shareBtn" class="btn btn-primary clearfix">FBshare</button> 
 		</div>
 	</div>
-	<button routerLink = "/" class="btn btn-success btn-block" >Thank You</button>
+	<div class="container">
+		<div class="panel panel-default" *ngFor = "let q of userAnswers ; let i = index ">
+			<div class="panel-heading">Question {{i + 1}}: {{q?.question}}</div>
+			<div class="panel-body">
+				<ul>
+					<li *ngFor = "let answer of  q.answers; let i = index ">
+						{{answer.name}}
+						<span *ngIf = "(answer.userAnswer  && answer.isCorrectAnswer === answer.userAnswer) || answer.isCorrectAnswer" class="glyphicon glyphicon-ok right"></span>
+						<span *ngIf = "(answer.userAnswer && answer.isCorrectAnswer !== answer.userAnswer)"  class="glyphicon glyphicon-remove wrong"></span>
+						<img src="{{answer.image}}" *ngIf = "!answer.name ">
+					</li>
+				</ul>
+				<div class="alert {{ isCorrect(q) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(q)}}.</div>
+			</div>
+		</div>
+		<button routerLink = "/" class="btn btn-success btn-block" >Thank You</button>
+	</div>
+<!-- 	<div id="fb-root"></div>
+	<script>
+	window.fbAsyncInit = function() {
+	FB.init({
+	appId            : '273601576467343',
+	autoLogAppEvents : true,
+	xfbml            : true,
+	version          : 'v2.10'
+	});
+	FB.AppEvents.logPageView();
+	};
+	(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=273601576467343";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script> -->
+
+	<script>
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    method: 'share',
+    display: 'popup',
+    href: 'https://my-quiz-app-in.herokuapp.com/',
+  }, function(response){});
+}
+</script>
+
 </div>
-
- <div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '273601576467343',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.10'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-
-  (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=273601576467343";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>

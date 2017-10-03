@@ -92,22 +92,22 @@ export class ResultComponent implements OnInit {
   }
 
 
-shareDialog(FB){
- FB.ui(
-  {
-    method: 'share',
-    href: 'https://my-quiz-app-in.herokuapp.com/',
-  },
-  // callback
-  function(response) {
-    if (response && !response.error_message) {
-      alert('Posting completed.');
-    } else {
-      alert('Error while posting.');
-    }
-  }
-)
-}
+// shareDialog(FB){
+//  FB.ui(
+//   {
+//     method: 'share',
+//     href: 'https://my-quiz-app-in.herokuapp.com/',
+//   },
+//   // callback
+//   function(response) {
+//     if (response && !response.error_message) {
+//       alert('Posting completed.');
+//     } else {
+//       alert('Error while posting.');
+//     }
+//   }
+// )
+// }
 }
  
 
