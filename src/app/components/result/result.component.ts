@@ -92,14 +92,23 @@ export class ResultComponent implements OnInit {
   }
 
 
-// share(FB){
-//   FB.init;
-//  FB.ui({
-//     method: 'share',
-//     display: 'popup',
-//     href: 'https://my-quiz-app-in.herokuapp.com/result/',
-//   }, function(response){});
-// }
+shareDialog(FB){
+  FB.init;
+ FB.ui({
+    method: 'share',
+    display: 'popup',
+    href: 'https://my-quiz-app-in.herokuapp.com',
+  }, function(response){});
+  let obj = {
+                method: 'feed',
+                link: 'https://my-quiz-app-in.herokuapp.com',
+                picture: 'http://fbrell.com/f8.jpg',
+                name: 'QuizApp',
+                caption: 'Some Caption for the URL',
+                description: 'use this app'
+            };
+             FB.ui(obj);
+            }
 }
  
 
