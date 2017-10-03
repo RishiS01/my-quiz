@@ -93,13 +93,13 @@ export class ResultComponent implements OnInit {
 
 
 
-  shareBtn(FB) {
-    FB.ui({
-    method: 'share',
-    display: 'popup',
-    href: 'https://my-quiz-app-in.herokuapp.com/',
-  }, function(response){});
-}
+//   shareBtn(FB) {
+//     FB.ui({
+//     method: 'share',
+//     display: 'popup',
+//     href: 'https://my-quiz-app-in.herokuapp.com/',
+//   }, function(response){});
+// }
 }
  
 
