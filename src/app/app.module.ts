@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 //Firebase services import
 
@@ -44,6 +45,10 @@ import { ComponentsComponent } from './components/components.component';
 
 import { FacebookModule } from 'ngx-facebook';
 import { CeiboShare } from 'ng2-social-share';
+
+import {ShareButtonsModule} from 'ngx-sharebuttons';
+
+
 
 
 
@@ -100,6 +105,7 @@ export const firebaseConfig = {
     EditQuestionComponent,
     StartQuizComponent,
     AddQuizComponent,
+     CeiboShare
     
     
   ],
@@ -112,19 +118,22 @@ export const firebaseConfig = {
     FormsModule,
     ReactiveFormsModule,
     LoadersCssModule,
-    FacebookModule.forRoot()
+    FacebookModule.forRoot(),
+    HttpModule, 
+  ShareButtonsModule.forRoot()
 
-    
-  ],
+    ],
   providers: [
     AngularFireAuth,
     AngularFireDatabase,
     AuthService,
     QuizService,
-    AuthGuard,
-    CeiboShare
+    AuthGuard
+
+    
   ],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
 

@@ -81,36 +81,39 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__("../../../../angularfire2/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_auth__ = __webpack_require__("../../../../angularfire2/auth/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_loaders_css__ = __webpack_require__("../../../../angular2-loaders-css/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_loaders_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_angular2_loaders_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_dropzone_wrapper__ = __webpack_require__("../../../../ngx-dropzone-wrapper/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_dropzone_wrapper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_ngx_dropzone_wrapper__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_quiz_quiz_component__ = __webpack_require__("../../../../../src/app/components/quiz/quiz.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_user_user_component__ = __webpack_require__("../../../../../src/app/components/user/user.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_add_quiz_add_quiz_component__ = __webpack_require__("../../../../../src/app/components/add-quiz/add-quiz.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_result_result_component__ = __webpack_require__("../../../../../src/app/components/result/result.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_quiz_questions_quiz_questions_component__ = __webpack_require__("../../../../../src/app/components/quiz-questions/quiz-questions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_edit_question_edit_question_component__ = __webpack_require__("../../../../../src/app/components/edit-question/edit-question.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_start_quiz_start_quiz_component__ = __webpack_require__("../../../../../src/app/components/start-quiz/start-quiz.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_quiz_service__ = __webpack_require__("../../../../../src/app/services/quiz.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_ngx_facebook__ = __webpack_require__("../../../../ngx-facebook/dist/esm/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_ng2_social_share__ = __webpack_require__("../../../../ng2-social-share/src/ng2-social-share.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_ng2_social_share___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_25_ng2_social_share__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2__ = __webpack_require__("../../../../angularfire2/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2_auth__ = __webpack_require__("../../../../angularfire2/auth/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angular2_loaders_css__ = __webpack_require__("../../../../angular2-loaders-css/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angular2_loaders_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_angular2_loaders_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_dropzone_wrapper__ = __webpack_require__("../../../../ngx-dropzone-wrapper/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_dropzone_wrapper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_ngx_dropzone_wrapper__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_quiz_quiz_component__ = __webpack_require__("../../../../../src/app/components/quiz/quiz.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_user_user_component__ = __webpack_require__("../../../../../src/app/components/user/user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_add_quiz_add_quiz_component__ = __webpack_require__("../../../../../src/app/components/add-quiz/add-quiz.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_result_result_component__ = __webpack_require__("../../../../../src/app/components/result/result.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_quiz_questions_quiz_questions_component__ = __webpack_require__("../../../../../src/app/components/quiz-questions/quiz-questions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_edit_question_edit_question_component__ = __webpack_require__("../../../../../src/app/components/edit-question/edit-question.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_start_quiz_start_quiz_component__ = __webpack_require__("../../../../../src/app/components/start-quiz/start-quiz.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_quiz_service__ = __webpack_require__("../../../../../src/app/services/quiz.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_ngx_facebook__ = __webpack_require__("../../../../ngx-facebook/dist/esm/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_ng2_social_share__ = __webpack_require__("../../../../ng2-social-share/src/ng2-social-share.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_ng2_social_share___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_26_ng2_social_share__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ngx_sharebuttons__ = __webpack_require__("../../../../ngx-sharebuttons/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -143,18 +146,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // import Facebookmodule
 
 
+
 //RoutesConfigration
 var appRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_14__components_user_user_component__["a" /* UserComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_11__components_login_login_component__["a" /* LoginComponent */] },
-    { path: 'quiz/:id', component: __WEBPACK_IMPORTED_MODULE_12__components_quiz_quiz_component__["a" /* QuizComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'navbar', component: __WEBPACK_IMPORTED_MODULE_13__components_navbar_navbar_component__["a" /* NavbarComponent */] },
-    { path: 'quiz-questions/:id', component: __WEBPACK_IMPORTED_MODULE_18__components_quiz_questions_quiz_questions_component__["a" /* QuizQuestionsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_15__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'result/:id', component: __WEBPACK_IMPORTED_MODULE_17__components_result_result_component__["a" /* ResultComponent */] },
-    { path: 'edit-question/:id/:qid', component: __WEBPACK_IMPORTED_MODULE_19__components_edit_question_edit_question_component__["a" /* EditQuestionComponent */] },
-    { path: 'start-quiz/:id', component: __WEBPACK_IMPORTED_MODULE_20__components_start_quiz_start_quiz_component__["a" /* StartQuizComponent */] },
-    { path: 'add-quiz', component: __WEBPACK_IMPORTED_MODULE_16__components_add_quiz_add_quiz_component__["a" /* AddQuizComponent */] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_15__components_user_user_component__["a" /* UserComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_12__components_login_login_component__["a" /* LoginComponent */] },
+    { path: 'quiz/:id', component: __WEBPACK_IMPORTED_MODULE_13__components_quiz_quiz_component__["a" /* QuizComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_24__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'navbar', component: __WEBPACK_IMPORTED_MODULE_14__components_navbar_navbar_component__["a" /* NavbarComponent */] },
+    { path: 'quiz-questions/:id', component: __WEBPACK_IMPORTED_MODULE_19__components_quiz_questions_quiz_questions_component__["a" /* QuizQuestionsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_24__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_16__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_24__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'result/:id', component: __WEBPACK_IMPORTED_MODULE_18__components_result_result_component__["a" /* ResultComponent */] },
+    { path: 'edit-question/:id/:qid', component: __WEBPACK_IMPORTED_MODULE_20__components_edit_question_edit_question_component__["a" /* EditQuestionComponent */] },
+    { path: 'start-quiz/:id', component: __WEBPACK_IMPORTED_MODULE_21__components_start_quiz_start_quiz_component__["a" /* StartQuizComponent */] },
+    { path: 'add-quiz', component: __WEBPACK_IMPORTED_MODULE_17__components_add_quiz_add_quiz_component__["a" /* AddQuizComponent */] }
 ];
 // dropzone configration
 var dropzone_config = {
@@ -182,39 +186,41 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__components_login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__components_quiz_quiz_component__["a" /* QuizComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__components_navbar_navbar_component__["a" /* NavbarComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__components_user_user_component__["a" /* UserComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__components_quiz_questions_quiz_questions_component__["a" /* QuizQuestionsComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__components_result_result_component__["a" /* ResultComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__components_quiz_questions_quiz_questions_component__["a" /* QuizQuestionsComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__components_edit_question_edit_question_component__["a" /* EditQuestionComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__components_start_quiz_start_quiz_component__["a" /* StartQuizComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__components_add_quiz_add_quiz_component__["a" /* AddQuizComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__components_login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__components_quiz_quiz_component__["a" /* QuizComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__components_navbar_navbar_component__["a" /* NavbarComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__components_user_user_component__["a" /* UserComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__components_quiz_questions_quiz_questions_component__["a" /* QuizQuestionsComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__components_result_result_component__["a" /* ResultComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__components_quiz_questions_quiz_questions_component__["a" /* QuizQuestionsComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__components_edit_question_edit_question_component__["a" /* EditQuestionComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__components_start_quiz_start_quiz_component__["a" /* StartQuizComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__components_add_quiz_add_quiz_component__["a" /* AddQuizComponent */],
+            __WEBPACK_IMPORTED_MODULE_26_ng2_social_share__["CeiboShare"]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */].forRoot(appRoutes),
-            __WEBPACK_IMPORTED_MODULE_9_ngx_dropzone_wrapper__["DropzoneModule"].forRoot(dropzone_config),
-            __WEBPACK_IMPORTED_MODULE_5_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
+            __WEBPACK_IMPORTED_MODULE_10_ngx_dropzone_wrapper__["DropzoneModule"].forRoot(dropzone_config),
+            __WEBPACK_IMPORTED_MODULE_6_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
             __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesModule"],
             __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* ReactiveFormsModule */],
-            __WEBPACK_IMPORTED_MODULE_8_angular2_loaders_css__["LoadersCssModule"],
-            __WEBPACK_IMPORTED_MODULE_24_ngx_facebook__["a" /* FacebookModule */].forRoot()
+            __WEBPACK_IMPORTED_MODULE_9_angular2_loaders_css__["LoadersCssModule"],
+            __WEBPACK_IMPORTED_MODULE_25_ngx_facebook__["a" /* FacebookModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_5__angular_http__["c" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_27_ngx_sharebuttons__["a" /* ShareButtonsModule */].forRoot()
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_7_angularfire2_auth__["a" /* AngularFireAuth */],
-            __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__["a" /* AngularFireDatabase */],
-            __WEBPACK_IMPORTED_MODULE_21__services_auth_service__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_22__services_quiz_service__["a" /* QuizService */],
-            __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__["a" /* AuthGuard */],
-            __WEBPACK_IMPORTED_MODULE_25_ng2_social_share__["CeiboShare"]
+            __WEBPACK_IMPORTED_MODULE_8_angularfire2_auth__["a" /* AngularFireAuth */],
+            __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__["a" /* AngularFireDatabase */],
+            __WEBPACK_IMPORTED_MODULE_22__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_23__services_quiz_service__["a" /* QuizService */],
+            __WEBPACK_IMPORTED_MODULE_24__guards_auth_guard__["a" /* AuthGuard */]
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -1030,7 +1036,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/result/result.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n\t<div class=\"row\">\n\t\t<div>\n\t\t\t<a href=\"#\" routerLink =\"/\" class=\"btn btn-link\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Back to Home Page</a>\n\t\t</div>\n\t\t<div>\n\t\t\t<h2>Congratulations</h2>\n\t\t\t<h3>Result:{{a | number: '1.2-2'}}%</h3>\n\t\t</div>\n\t\t<div class=\"container\">\n\t\t\t<!-- <a href=\"https://www.facebook.com/sharer/sharer.php?s=100&p[url]=https://my-quiz-app-in.herokuapp.com/&[images][0]=&p[title]=QuizApp&p[summary]= \" \n\t\t\ttarget=\"_blank\" \n\t\t\tonclick=\"window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); \n\t\t\treturn false\">\n\t\t\t<img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAUCAMAAAAA9GVfAAACnVBMVEU0TI01TIw1TY01TY41TY81To82TY42TY85UZU6U5k7VJs7VZ07VaE8VZs8Vp08VqE8VqI8V6I9Vp49V6A9V6M+WJ8+WKA+WKQ+WaQ+WaU/WaM/WaQ/WaY/WqY/WqdAW6ZAW6dAW6hBW6dBXKhBXKlCXapCXatCXqpCXqxDXqtDXqxDX6xEX65EYK5EYK9FX65FYK9FYa9FYbBGYbBGYrFGYrJHYrFHY7JHY7NIZLNIZLRIZbRJZbVJZrZKZrZKZ7dLZ7hLaLhLaLlMablSaKpSaaxTaq1ZcbVbc7hfdLJfdbNfdbRfdrZgdrdhd7dhe8Fiebtie8Fofr9qgcFsgb5shMVthcZugrhugrtvgrxwhL1whL5xhb9xhcBzh8JziL9ziMJziMN1isV1isZ2iL12ir52isF5jMWAjreAk8eEk7+ElMOFlseFmMiIl7yKmsqOnL+RnsGSnsGVpdCXp9SeqsmfrNKfrNOfrdSgrdOgrdSgrtOgrtWhrtShrtWhr9Sir9WisNaisNejsNimstWoss+qtM+suNesudyuudmwvNyyvNazvNizvdqzvtqzvtu0vtu0vty0v9y0v961v921v962v9i3v9a3wd24wt65wtu5w+G8xeG8xuG9xNq+xtzAyeHAyePByuHCyd7Dy+DEzOPFzOHGz+fGz+nJ0OLL0uXN1OjP1urQ1+vS1+bS2OfT2evU2uzV2+vW2+jY3evZ3uzZ3u3b4O7c4vHd4ezd4/Le4/Df4+3f4+/g5PHg5fHh5vHk5/Dk6PLn6vXo6/Xo7Pbp7PTq7fbr7vTr7vbt8Pbx8vfx8vjx8/j09fr09vn19vr19/v29/r3+Pv5+vz6+/z6+/37+/37/P78/P38/P78/f79/f7+/v////+ZYdejAAACCUlEQVR4AWNYEebkTAYMXMHg7+BIFgxlsLMnEzLY2tja7LqHBHYARYiBDFbWVtb3UABQhBjIYGlhaQHTszw5uOTePZCIpakoEwOvmQarMpCNHTKYmJuYQzUeBbKT7t0DiZj4rbtzd09K49UpQDZ2yGBibGIM1dlsEnQESIFETFquL+i4sbzhajcbs5SxkRATA6e+PCMHs5IYMxOfAVgFg56hniFUZ5NeIogCiehNvjuPS12v/uqxazcXa3uvv3P3YOqke6duzVx5687mcLAKBl0dXR2wviNNcboeTbPv3QOJ6KYfv7szT6L26u6EQ6czu85ktd6cOOnepoBZF4oKLy0Dq2DQ0tbSButcC2JpFd+7B6a1QxZevD2t+uoMrVXnc13a9l65N2HCvQnaW0Aq94FVMGiqaaqBdR6uidV0r1lz7x5IRJObRTr+xLEZV/s1V53PWXJ9afvVfqBOta3ns6XZhcEqGFRUVVSh/qxTiQFRIBGV1ddKM84e6LzapwLUue1ywfy7Pb33elXn3J5eemUuWAWDiqKKIlRnlUo0WKciEKbtv3P3ZH7ttSkqqy/mVJy7e/zyhqn3pir6brh1Z6MPWAWDnIKcAlRnpVwUiAKKEAMZZGVkZaA6y2UjQRRQhBjIIC4pLrkdorNMPAJIbgeKEAMZxEXIhAxuggJkQS+GRZ78PGRA10UAUdSA0BPiLlkAAAAASUVORK5CYII=\" width=\"80\" height=\"40\" /></a> -->\n\n\t\t\t<button ceiboShare  [facebook]=\"{u:https://my-quiz-app-in.herokuapp.com/, description:'Checkout this awesome QuizApp . I scored :{{a | number: '1.2-2'}}%' }\">Facebook</button>\n\t\t\t\n\t\t\t<!-- <div>\n          \t\t<button class=\"btn btn-medium\"\n                  socialshare\n                  socialshare-provider=\"facebook\"\n                  socialshare-type=\"share\"\n                  socialshare-via=\"273601576467343\"\n                  socialshare-media=\"http://720kb.net/assets/img/720kb-fb.png\"\n                  socialshare-quote=\"TEST\"\n                  socialshare-title=\"QuizApp\"\n                  \n                  \n                  socialshare-url='https://my-quiz-app-in.herokuapp.com/'\n                  socialshare-trigger=\"click\">\n               Share on Facebook (share dialog)\n         \t\t </button>\n        </div>\n -->\n\n\t\t</div>\n\t</div>\n\t<div class=\"container\">\n\t\t<div class=\"panel panel-default\" *ngFor = \"let q of userAnswers ; let i = index \">\n\t\t\t<div class=\"panel-heading\">Question {{i + 1}}: {{q?.question}}</div>\n\t\t\t<div class=\"panel-body\">\n\t\t\t\t<ul>\n\t\t\t\t\t<li *ngFor = \"let answer of  q.answers; let i = index \">\n\t\t\t\t\t\t{{answer.name}}\n\t\t\t\t\t\t<span *ngIf = \"(answer.userAnswer  && answer.isCorrectAnswer === answer.userAnswer) || answer.isCorrectAnswer\" class=\"glyphicon glyphicon-ok right\"></span>\n\t\t\t\t\t\t<span *ngIf = \"(answer.userAnswer && answer.isCorrectAnswer !== answer.userAnswer)\"  class=\"glyphicon glyphicon-remove wrong\"></span>\n\t\t\t\t\t\t<img src=\"{{answer.image}}\" *ngIf = \"!answer.name \">\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t\t<div class=\"alert {{ isCorrect(q) == 'correct'? 'alert-success': 'alert-danger'}}\">Your answer is {{isCorrect(q)}}.</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<button routerLink = \"/\" class=\"btn btn-success btn-block\" >Thank You</button>\n\t</div>\n<!-- \t<div id=\"fb-root\"></div>\n\t<script>\n\twindow.fbAsyncInit = function() {\n\tFB.init({\n\tappId            : '273601576467343',\n\tautoLogAppEvents : true,\n\txfbml            : true,\n\tversion          : 'v2.10'\n\t});\n\tFB.AppEvents.logPageView();\n\t};\n\t(function(d, s, id) {\n\tvar js, fjs = d.getElementsByTagName(s)[0];\n\tif (d.getElementById(id)) return;\n\tjs = d.createElement(s); js.id = id;\n\tjs.src = \"//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=273601576467343\";\n\tfjs.parentNode.insertBefore(js, fjs);\n\t}(document, 'script', 'facebook-jssdk'));</script> -->\n\n\t\n\n</div>"
+module.exports = "<div>\n\t<div class=\"row\">\n\t\t<div>\n\t\t\t<a href=\"#\" routerLink =\"/\" class=\"btn btn-link\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Back to Home Page</a>\n\t\t</div>\n\t\t<div>\n\t\t\t<h2>Congratulations</h2>\n\t\t\t<h3>Result:{{a | number: '1.2-2'}}%</h3>\n\t\t</div>\n\t\t<div class=\"container\">\n\t\t\t       <!-- facebook share  -->\n\t\t\t<button ceiboShare  [facebook]=\"{u:repoUrl,description:'des' ,text:'Checkout this awesome ng2 social share directive' }\" class=\"btn btn-primary btn-sm facebook\" >Share on facebook</button>\n\t\t</div>\n\t</div>\n\t<div class=\"container\">\n\t\t<div class=\"panel panel-default\" *ngFor = \"let q of userAnswers ; let i = index \">\n\t\t\t<div class=\"panel-heading\">Question {{i + 1}}: {{q?.question}}</div>\n\t\t\t<div class=\"panel-body\">\n\t\t\t\t<ul>\n\t\t\t\t\t<li *ngFor = \"let answer of  q.answers; let i = index \">\n\t\t\t\t\t\t{{answer.name}}\n\t\t\t\t\t\t<span *ngIf = \"(answer.userAnswer  && answer.isCorrectAnswer === answer.userAnswer) || answer.isCorrectAnswer\" class=\"glyphicon glyphicon-ok right\"></span>\n\t\t\t\t\t\t<span *ngIf = \"(answer.userAnswer && answer.isCorrectAnswer !== answer.userAnswer)\"  class=\"glyphicon glyphicon-remove wrong\"></span>\n\t\t\t\t\t\t<img src=\"{{answer.image}}\" *ngIf = \"!answer.name \">\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t\t<div class=\"alert {{ isCorrect(q) == 'correct'? 'alert-success': 'alert-danger'}}\">Your answer is {{isCorrect(q)}}.</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<button routerLink = \"/\" class=\"btn btn-success btn-block\" >Thank You</button>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -1063,6 +1069,7 @@ var ResultComponent = (function () {
         this.route = route;
         this.facebookService = facebookService;
         this.repoUrl = 'https://my-quiz-app-in.herokuapp.com/';
+        this.des = 'I tried this asome app & scored ';
         this.quizData = [];
         this.userAnswers = [{
                 answers: []
@@ -1120,19 +1127,13 @@ ResultComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-result',
         template: __webpack_require__("../../../../../src/app/components/result/result.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/result/result.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/components/result/result.component.css")],
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_quiz_service__["a" /* QuizService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_quiz_service__["a" /* QuizService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_ngx_facebook__["b" /* FacebookService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ngx_facebook__["b" /* FacebookService */]) === "function" && _d || Object])
 ], ResultComponent);
 
+;
 var _a, _b, _c, _d;
-//   shareBtn(FB) {
-//     FB.ui({
-//     method: 'share',
-//     display: 'popup',
-//     href: 'https://my-quiz-app-in.herokuapp.com/',
-//   }, function(response){});
-// }
 //# sourceMappingURL=result.component.js.map
 
 /***/ }),
