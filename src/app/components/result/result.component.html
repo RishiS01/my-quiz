@@ -3,30 +3,35 @@
 		<div>
 			<a href="#" routerLink ="/" class="btn btn-link"><span class="glyphicon glyphicon-arrow-left"></span> Back to Home Page</a>
 		</div>
+	</div>
+	<div *ngIf = "!userResult; else goToHomePage">
 		<div>
 			<h2>Congratulations</h2>
 			<h3>Result:{{a | number: '1.2-2'}}%</h3>
 		</div>
 		<div class="container">
-			       <!-- facebook share  -->
-			<button ceiboShare  [facebook]="{u:repoUrl,description:'des' ,text:'Checkout this awesome ng2 social share directive' }" class="btn btn-primary btn-sm facebook" >Share on facebook</button>
+			<!-- facebook share  -->
+			<button class="btn btn-primary" (click) = "FbShare()">Share on FB</button>
 		</div>
-	</div>
-	<div class="container">
-		<div class="panel panel-default" *ngFor = "let q of userAnswers ; let i = index ">
-			<div class="panel-heading">Question {{i + 1}}: {{q?.question}}</div>
-			<div class="panel-body">
-				<ul>
-					<li *ngFor = "let answer of  q.answers; let i = index ">
-						{{answer.name}}
-						<span *ngIf = "(answer.userAnswer  && answer.isCorrectAnswer === answer.userAnswer) || answer.isCorrectAnswer" class="glyphicon glyphicon-ok right"></span>
-						<span *ngIf = "(answer.userAnswer && answer.isCorrectAnswer !== answer.userAnswer)"  class="glyphicon glyphicon-remove wrong"></span>
-						<img src="{{answer.image}}" *ngIf = "!answer.name ">
-					</li>
-				</ul>
-				<div class="alert {{ isCorrect(q) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(q)}}.</div>
+		<div class="container">
+			<div class="panel panel-default" *ngFor = "let q of userAnswers ; let i = index ">
+				<div class="panel-heading">Question {{i + 1}}: {{q?.question}}</div>
+				<div class="panel-body">
+					<ul>
+						<li *ngFor = "let answer of  q.answers; let i = index ">
+							{{answer.name}}
+							<span *ngIf = "(answer.userAnswer  && answer.isCorrectAnswer === answer.userAnswer) || answer.isCorrectAnswer" class="glyphicon glyphicon-ok right"></span>
+							<span *ngIf = "(answer.userAnswer && answer.isCorrectAnswer !== answer.userAnswer)"  class="glyphicon glyphicon-remove wrong"></span>
+							<img src="{{answer.image}}" *ngIf = "!answer.name ">
+						</li>
+					</ul>
+					<div class="alert {{ isCorrect(q) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(q)}}.</div>
+				</div>
 			</div>
+			<button routerLink = "/" class="btn btn-success btn-block" >Thank You</button>
 		</div>
-		<button routerLink = "/" class="btn btn-success btn-block" >Thank You</button>
 	</div>
+	<ng-template #goToHomePage>
+		<h4 class="condition">Nothing to display Please click the Link to go on Main Page</h4>
+	</ng-template>
 </div>

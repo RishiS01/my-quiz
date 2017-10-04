@@ -1023,7 +1023,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".right{\n\tcolor: green;\n}\n.wrong{\n\tcolor: red;\n}\nh3{\n\ttext-align: center;\n}\nli{\n\tlist-style: none;\n}\nimg{\n\tmax-width: 30%;\n\tmargin: 10px;\n\tpadding: 10px;\n}\nh2{\n\ttext-align: center;\n\tcolor: red;\n}\n", ""]);
+exports.push([module.i, ".right{\n\tcolor: green;\n}\n.wrong{\n\tcolor: red;\n}\nh3{\n\ttext-align: center;\n}\nli{\n\tlist-style: none;\n}\nimg{\n\tmax-width: 30%;\n\tmargin: 10px;\n\tpadding: 10px;\n}\nh2{\n\ttext-align: center;\n\tcolor: red;\n}\n.condition{\n\tcolor:blue;\n\ttext-align: center;\n}\n", ""]);
 
 // exports
 
@@ -1036,7 +1036,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/result/result.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n\t<div class=\"row\">\n\t\t<div>\n\t\t\t<a href=\"#\" routerLink =\"/\" class=\"btn btn-link\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Back to Home Page</a>\n\t\t</div>\n\t\t<div>\n\t\t\t<h2>Congratulations</h2>\n\t\t\t<h3>Result:{{a | number: '1.2-2'}}%</h3>\n\t\t</div>\n\t\t<div class=\"container\">\n\t\t\t       <!-- facebook share  -->\n\t\t\t<button ceiboShare  [facebook]=\"{u:repoUrl,description:'des' ,text:'Checkout this awesome ng2 social share directive' }\" class=\"btn btn-primary btn-sm facebook\" >Share on facebook</button>\n\t\t</div>\n\t</div>\n\t<div class=\"container\">\n\t\t<div class=\"panel panel-default\" *ngFor = \"let q of userAnswers ; let i = index \">\n\t\t\t<div class=\"panel-heading\">Question {{i + 1}}: {{q?.question}}</div>\n\t\t\t<div class=\"panel-body\">\n\t\t\t\t<ul>\n\t\t\t\t\t<li *ngFor = \"let answer of  q.answers; let i = index \">\n\t\t\t\t\t\t{{answer.name}}\n\t\t\t\t\t\t<span *ngIf = \"(answer.userAnswer  && answer.isCorrectAnswer === answer.userAnswer) || answer.isCorrectAnswer\" class=\"glyphicon glyphicon-ok right\"></span>\n\t\t\t\t\t\t<span *ngIf = \"(answer.userAnswer && answer.isCorrectAnswer !== answer.userAnswer)\"  class=\"glyphicon glyphicon-remove wrong\"></span>\n\t\t\t\t\t\t<img src=\"{{answer.image}}\" *ngIf = \"!answer.name \">\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t\t<div class=\"alert {{ isCorrect(q) == 'correct'? 'alert-success': 'alert-danger'}}\">Your answer is {{isCorrect(q)}}.</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<button routerLink = \"/\" class=\"btn btn-success btn-block\" >Thank You</button>\n\t</div>\n</div>"
+module.exports = "<div>\n\t<div class=\"row\">\n\t\t<div>\n\t\t\t<a href=\"#\" routerLink =\"/\" class=\"btn btn-link\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Back to Home Page</a>\n\t\t</div>\n\t</div>\n\t<div *ngIf = \"!userResult; else goToHomePage\">\n\t\t<div>\n\t\t\t<h2>Congratulations</h2>\n\t\t\t<h3>Result:{{a | number: '1.2-2'}}%</h3>\n\t\t</div>\n\t\t<div class=\"container\">\n\t\t\t<!-- facebook share  -->\n\t\t\t<button class=\"btn btn-primary\" (click) = \"FbShare()\">Share on FB</button>\n\t\t</div>\n\t\t<div class=\"container\">\n\t\t\t<div class=\"panel panel-default\" *ngFor = \"let q of userAnswers ; let i = index \">\n\t\t\t\t<div class=\"panel-heading\">Question {{i + 1}}: {{q?.question}}</div>\n\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li *ngFor = \"let answer of  q.answers; let i = index \">\n\t\t\t\t\t\t\t{{answer.name}}\n\t\t\t\t\t\t\t<span *ngIf = \"(answer.userAnswer  && answer.isCorrectAnswer === answer.userAnswer) || answer.isCorrectAnswer\" class=\"glyphicon glyphicon-ok right\"></span>\n\t\t\t\t\t\t\t<span *ngIf = \"(answer.userAnswer && answer.isCorrectAnswer !== answer.userAnswer)\"  class=\"glyphicon glyphicon-remove wrong\"></span>\n\t\t\t\t\t\t\t<img src=\"{{answer.image}}\" *ngIf = \"!answer.name \">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t\t<div class=\"alert {{ isCorrect(q) == 'correct'? 'alert-success': 'alert-danger'}}\">Your answer is {{isCorrect(q)}}.</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<button routerLink = \"/\" class=\"btn btn-success btn-block\" >Thank You</button>\n\t\t</div>\n\t</div>\n\t<ng-template #goToHomePage>\n\t\t<h4 class=\"condition\">Nothing to display Please click the Link to go on Main Page</h4>\n\t</ng-template>\n</div>"
 
 /***/ }),
 
@@ -1048,7 +1048,6 @@ module.exports = "<div>\n\t<div class=\"row\">\n\t\t<div>\n\t\t\t<a href=\"#\" r
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_quiz_service__ = __webpack_require__("../../../../../src/app/services/quiz.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_facebook__ = __webpack_require__("../../../../ngx-facebook/dist/esm/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1061,15 +1060,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var ResultComponent = (function () {
-    function ResultComponent(router, quizService, route, facebookService) {
+    function ResultComponent(router, quizService, route) {
         this.router = router;
         this.quizService = quizService;
         this.route = route;
-        this.facebookService = facebookService;
-        this.repoUrl = 'https://my-quiz-app-in.herokuapp.com/';
-        this.des = 'I tried this asome app & scored ';
         this.quizData = [];
         this.userAnswers = [{
                 answers: []
@@ -1082,12 +1077,7 @@ var ResultComponent = (function () {
                 isCorrectAnswer: false,
                 image: ''
             }];
-        var initParams = {
-            appId: '273601576467343',
-            xfbml: true,
-            version: 'v2.10'
-        };
-        facebookService.init(initParams);
+        this.userResult = false;
     }
     ResultComponent.prototype.ngOnInit = function () {
         var qArray = [];
@@ -1095,6 +1085,10 @@ var ResultComponent = (function () {
         var $this = this;
         this.id = this.route.snapshot.params['id'];
         this.userAnswers = this.quizService.getUserAnswers();
+        if (this.userAnswers.length === 0) {
+            this.userResult = true;
+            return;
+        }
         this.userAnswers.forEach(function (qArray) {
             qArray.answers.forEach(function (i) {
                 if (i.userAnswer == undefined) {
@@ -1121,6 +1115,10 @@ var ResultComponent = (function () {
     ResultComponent.prototype.score = function () {
         this.a = this.correctAnswers / this.userAnswers.length * 100;
     };
+    ResultComponent.prototype.FbShare = function () {
+        window.open("https://www.facebook.com/sharer/sharer.php?u=https://my-quiz-app-in.herokuapp.com/start-quiz/" + this.id);
+        // this.router.navigate(['/']);
+    };
     return ResultComponent;
 }());
 ResultComponent = __decorate([
@@ -1129,11 +1127,10 @@ ResultComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/result/result.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/result/result.component.css")],
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_quiz_service__["a" /* QuizService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_quiz_service__["a" /* QuizService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_ngx_facebook__["b" /* FacebookService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ngx_facebook__["b" /* FacebookService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_quiz_service__["a" /* QuizService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_quiz_service__["a" /* QuizService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
 ], ResultComponent);
 
-;
-var _a, _b, _c, _d;
+var _a, _b, _c;
 //# sourceMappingURL=result.component.js.map
 
 /***/ }),

@@ -25950,7 +25950,7 @@ FacebookModule.ctorParameters = function () { return []; };
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_fb_video_fb_video__ = __webpack_require__("../../../../ngx-facebook/dist/esm/components/fb-video/fb-video.js");
 /* unused harmony reexport FBVideoComponent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_facebook__ = __webpack_require__("../../../../ngx-facebook/dist/esm/providers/facebook.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_11__providers_facebook__["a"]; });
+/* unused harmony reexport FacebookService */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__facebook_module__ = __webpack_require__("../../../../ngx-facebook/dist/esm/facebook.module.js");
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_12__facebook_module__["a"]; });
 // components
